@@ -1,0 +1,63 @@
+{
+    "jobs": [
+      {
+        "id": 1,
+        "title": "Frontend Developer",
+        "company": "Tech Company Inc.",
+        "location": "New York, NY",
+        "salary": "$80,000 - $100,000",
+        "description": "We are hiring a frontend developer with proficiency in HTML, CSS, and JavaScript.",
+        "url": "https://picsum.photos/id/3/367/267"
+      },
+      {
+        "id": 2,
+        "title": "Data Analyst",
+        "company": "Microsoft Corporation",
+        "location": "New York, NY",
+        "salary": "$80,000 - $100,000",
+        "description": "We are hiring a data analyst with proficiency in SQL and data visualization tools.",
+        "url": "https://media.istockphoto.com/id/1350722246/photo/server-room-background.webp?b=1&s=170667a&w=0&k=20&c=B20NCbhq-UXwjYJFaOWWcarR2w63PhXipjJa9GGB4uE="
+      },
+      {
+        "id": 3,
+        "title": "Backend Developer",
+        "company": "Amazon.com",
+        "location": "New York, NY",
+        "salary": "$80,000 - $100,000",
+        "description": "We are hiring a backend developer with proficiency in Node.js, Express.js, and MongoDB.",
+        "url": "https://media.istockphoto.com/id/1473164518/photo/woman-with-back-pain-working-at-standing-desk-home-office.webp?b=1&s=170667a&w=0&k=20&c=XZNssSyEmkDSBK5w3f4lLUXcpTS24cyN890c5ZIUTiI="
+      },
+      {
+        "id": 4,
+        "title": "Backend Developer",
+        "company": "Amazon.com",
+        "location": "New York, NY",
+        "salary": "$80,000 - $100,000",
+        "description": "We are hiring a backend developer with proficiency in Node.js, Express.js, and MongoDB.",
+        "url": "https://images.unsplash.com/photo-1545665277-5937489579f2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2NyZWVufGVufDB8fDB8fHww"
+      },
+      {
+        "id": 5,
+        "title": "Backend Developer",
+        "company": "Amazon.com",
+        "location": "New York, NY",
+        "salary": "$80,000 - $100,000",
+        "description": "We are hiring a backend developer with proficiency in Node.js, Express.js, and MongoDB.",
+        "url": "https://images.unsplash.com/photo-1555963153-11ff60182d08?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHNjcmVlbnxlbnwwfHwwfHx8MA%3D%3D"
+      }
+    ],
+    "jobAlerts": [
+      {
+        "title": "Frontend Developer Needed",
+        "description": "Tech Company Inc. is seeking a skilled frontend developer for an exciting project.",
+        "location": "New York, NY",
+        "salary": "$80,000 - $100,000"
+      },
+      {
+        "title": "Data Analyst Position Available",
+        "description": "Microsoft Corporation is looking for a talented data analyst to join our team.",
+        "location": "New York, NY",
+        "salary": "$80,000 - $100,000"
+      }
+    ]
+  }
