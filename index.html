@@ -3,20 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Job Portal</title>
+  <title>CONNECTED</title>
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
   <header>
     <h1>CONNECTED</h1>
     <p>Looking For The One. Apply, Work, Succeed</p>
-    <div><button id="theme-toggle">Dark/Light mode</button></div>
+    <button id="theme-toggle">Dark/Light Mode</button> <!-- Light/Dark mode toggle button -->
+    <label for="salary-filter">Salary:</label>
+    <select id="salary-filter">
+      <option value="Any">Any</option>
+      <option value="$0 - $50,000">$0 - $50,000</option>
+      <option value="$50,000 - $100,000">$50,000 - $100,000</option>
+      <!-- Add more options as needed -->
+    </select>
+    <label for="location-filter">Location:</label>
+    <select id="location-filter">
+      <option value="Any">Any</option>
+      <option value="New York, NY">New York, NY</option>
+      <option value="Los Angeles, CA">Los Angeles, CA</option>
+      <!-- Add more options as needed -->
+    </select>
+    <button id="filter-btn">Filter</button> <!-- Filter button -->
   </header>
   <main>
     <section id="job-postings">
       <!-- Job postings will be dynamically added here -->
     </section>
-    <h1>Jobs to be made available in the next weeks to come :</h1>
+
     <section id="job-alerts">
       <!-- Job alerts will be displayed here -->
     </section> 

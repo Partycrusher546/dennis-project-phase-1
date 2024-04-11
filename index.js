@@ -2,46 +2,64 @@ window.addEventListener('DOMContentLoaded', () => {
     fetch('db.json')
         .then(response => response.json())
         .then(data => {
-            displayJobListings(data);
-            displayJobAlerts(data);
+            displayJobListings(data.jobs); // Pass only jobs data to displayJobListings function
+            displayJobAlerts(data.jobAlerts);
         })
         .catch(error => console.error('Error loading data:', error));
 });
 
-function displayJobListings(data) {
+// Display job listings based on filters
+function displayJobListings(jobs) {
     const jobPostingsContainer = document.getElementById('job-postings');
-    data.jobs.forEach(job => {
-        const jobCard = document.createElement('div');
-        jobCard.classList.add('job-card');
-        jobCard.setAttribute('id', `job-${job.id}`); // Set unique ID for each job card
-        jobCard.innerHTML = `
-            <h2>${job.title}</h2>
-            <p><strong>Company:</strong> ${job.company}</p>
-            <p><strong>Location:</strong> ${job.location}</p>
-            <p><strong>Salary:</strong> ${job.salary}</p>
-            <p><strong>Description:</strong> ${job.description}</p>
-            <img src="${job.url}" alt="Job Image">
-            <button onclick="applyForJob(${job.id})">Apply</button>
-        `;
+    jobPostingsContainer.innerHTML = ''; // Clear previous listings
+
+    jobs.forEach(job => {
+        const jobCard = createJobCard(job);
         jobPostingsContainer.appendChild(jobCard);
     });
 }
 
-function displayJobAlerts(data) {
-    const jobAlertsContainer = document.getElementById('job-alerts');
-    data.jobAlerts.forEach(alert => {
-        const alertItem = document.createElement('div');
-        alertItem.classList.add('job-alert');
-        alertItem.innerHTML = `
-            <p><strong>Title:</strong> ${alert.title}</p>
-            <p><strong>Description:</strong> ${alert.description}</p>
-            <p><strong>Location:</strong> ${alert.location}</p>
-            <p><strong>Salary:</strong> ${alert.salary}</p>
-        `;
-        jobAlertsContainer.appendChild(alertItem);
-    });
+// Create a job card element
+function createJobCard(job) {
+    const jobCard = document.createElement('div');
+    jobCard.classList.add('job-card');
+    jobCard.setAttribute('id', `job-${job.id}`); // Set unique ID for each job card
+    jobCard.innerHTML = `
+        <h2>${job.title}</h2>
+        <p><strong>Company:</strong> ${job.company}</p>
+        <p><strong>Location:</strong> ${job.location}</p>
+        <p><strong>Salary:</strong> ${job.salary}</p>
+        <p><strong>Description:</strong> ${job.description}</p>
+        <img src="${job.url}" alt="Job Image">
+        <button onclick="applyForJob(${job.id})">Apply</button>
+    `;
+    return jobCard;
 }
 
+// Filter job listings based on criteria
+function filterJobListings() {
+    const salaryFilter = document.getElementById('salary-filter').value;
+    const locationFilter = document.getElementById('location-filter').value;
+
+    fetch('db.json')
+        .then(response => response.json())
+        .then(data => {
+            let filteredJobs = data.jobs;
+
+            if (salaryFilter !== 'Any') {
+                filteredJobs = filteredJobs.filter(job => job.salary === salaryFilter);
+            }
+
+            if (locationFilter !== 'Any') {
+                filteredJobs = filteredJobs.filter(job => job.location === locationFilter);
+            }
+
+            displayJobListings(filteredJobs);
+        })
+        .catch(error => console.error('Error loading data:', error));
+}
+
+// Apply for a job
 function applyForJob(jobId) {
     const jobCard = document.getElementById(`job-${jobId}`);
     const jobForm = `
@@ -72,6 +90,7 @@ function applyForJob(jobId) {
         }
     });
 }
+
 // Function to toggle between light and dark mode
 function toggleTheme() {
     const body = document.body;
@@ -82,3 +101,7 @@ function toggleTheme() {
 // Add event listener to the theme toggle button
 const themeToggleBtn = document.getElementById('theme-toggle');
 themeToggleBtn.addEventListener('click', toggleTheme);
+
+// Add event listener to the filter button
+const filterBtn = document.getElementById('filter-btn');
+filterBtn.addEventListener('click', filterJobListings);
