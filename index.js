@@ -10,7 +10,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 function displayJobListings(jobs) {
     const jobPostingsContainer = document.getElementById('job-postings');
-    jobPostingsContainer.innerHTML = ''; // Clear previous listings
+    jobPostingsContainer.innerHTML = ''; 
 
     jobs.forEach(job => {
         const jobCard = createJobCard(job);
