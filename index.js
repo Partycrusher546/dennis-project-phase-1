@@ -75,7 +75,7 @@ function applyForJob(jobId) {
         const resume = formData.get('resume');
 
         if (name && email && resume) {
-            alert('Application submitted successfully!');
+            window.location.reload();
         } else {
             alert('Please fill out all fields.');
         }
