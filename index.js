@@ -36,7 +36,7 @@ function createJobCard(job) {
 
 function displayJobAlerts(alerts) {
     const jobAlertsContainer = document.getElementById('job-alerts');
-    jobAlertsContainer.innerHTML = ''; // Clear previous alerts
+    jobAlertsContainer.innerHTML = ''; 
 
     alerts.forEach(alert => {
         const alertItem = document.createElement('div');
