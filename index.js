@@ -2,13 +2,12 @@ window.addEventListener('DOMContentLoaded', () => {
     fetch('db.json')
         .then(response => response.json())
         .then(data => {
-            displayJobListings(data.jobs); // Pass only jobs data to displayJobListings function
+            displayJobListings(data.jobs);
             displayJobAlerts(data.jobAlerts);
         })
         .catch(error => console.error('Error loading data:', error));
 });
 
-// Display job listings based on filters
 function displayJobListings(jobs) {
     const jobPostingsContainer = document.getElementById('job-postings');
     jobPostingsContainer.innerHTML = ''; // Clear previous listings
@@ -19,7 +18,6 @@ function displayJobListings(jobs) {
     });
 }
 
-// Create a job card element
 function createJobCard(job) {
     const jobCard = document.createElement('div');
     jobCard.classList.add('job-card');
@@ -36,30 +34,23 @@ function createJobCard(job) {
     return jobCard;
 }
 
-// Filter job listings based on criteria
-function filterJobListings() {
-    const salaryFilter = document.getElementById('salary-filter').value;
-    const locationFilter = document.getElementById('location-filter').value;
+function displayJobAlerts(alerts) {
+    const jobAlertsContainer = document.getElementById('job-alerts');
+    jobAlertsContainer.innerHTML = ''; // Clear previous alerts
 
-    fetch('db.json')
-        .then(response => response.json())
-        .then(data => {
-            let filteredJobs = data.jobs;
-
-            if (salaryFilter !== 'Any') {
-                filteredJobs = filteredJobs.filter(job => job.salary === salaryFilter);
-            }
-
-            if (locationFilter !== 'Any') {
-                filteredJobs = filteredJobs.filter(job => job.location === locationFilter);
-            }
-
-            displayJobListings(filteredJobs);
-        })
-        .catch(error => console.error('Error loading data:', error));
+    alerts.forEach(alert => {
+        const alertItem = document.createElement('div');
+        alertItem.classList.add('job-alert');
+        alertItem.innerHTML = `
+            <p><strong>Title:</strong> ${alert.title}</p>
+            <p><strong>Description:</strong> ${alert.description}</p>
+            <p><strong>Location:</strong> ${alert.location}</p>
+            <p><strong>Salary:</strong> ${alert.salary}</p>
+        `;
+        jobAlertsContainer.appendChild(alertItem);
+    });
 }
 
-// Apply for a job
 function applyForJob(jobId) {
     const jobCard = document.getElementById(`job-${jobId}`);
     const jobForm = `
@@ -91,17 +82,38 @@ function applyForJob(jobId) {
     });
 }
 
-// Function to toggle between light and dark mode
+function filterJobListings() {
+    const salaryFilter = document.getElementById('salary-filter').value;
+    const locationFilter = document.getElementById('location-filter').value;
+
+    fetch('db.json')
+        .then(response => response.json())
+        .then(data => {
+            let filteredJobs = data.jobs;
+
+            if (salaryFilter !== 'Any') {
+                filteredJobs = filteredJobs.filter(job => job.salary.includes(salaryFilter));
+            }
+
+            if (locationFilter !== 'Any') {
+                filteredJobs = filteredJobs.filter(job => job.location === locationFilter);
+            }
+
+            displayJobListings(filteredJobs);
+        })
+        .catch(error => console.error('Error loading data:', error));
+}
+
 function toggleTheme() {
     const body = document.body;
     body.classList.toggle('light-theme');
     body.classList.toggle('dark-theme');
 }
 
-// Add event listener to the theme toggle button
+
 const themeToggleBtn = document.getElementById('theme-toggle');
 themeToggleBtn.addEventListener('click', toggleTheme);
 
-// Add event listener to the filter button
+
 const filterBtn = document.getElementById('filter-btn');
 filterBtn.addEventListener('click', filterJobListings);
