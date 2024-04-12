@@ -86,24 +86,28 @@ function filterJobListings() {
     const salaryFilter = document.getElementById('salary-filter').value;
     const locationFilter = document.getElementById('location-filter').value;
 
-    fetch('db.json')
-        .then(response => response.json())
-        .then(data => {
-            let filteredJobs = data.jobs;
-
-            if (salaryFilter !== 'Any') {
-                filteredJobs = filteredJobs.filter(job => job.salary.includes(salaryFilter));
-            }
-
-            if (locationFilter !== 'Any') {
-                filteredJobs = filteredJobs.filter(job => job.location === locationFilter);
-            }
-
-            displayJobListings(filteredJobs);
-        })
-        .catch(error => console.error('Error loading data:', error));
-}
-
+    function filterJobListings() {
+        const salaryFilter = document.getElementById('salary-filter').value;
+        const locationFilter = document.getElementById('location-filter').value;
+    
+        fetch('db.json')
+            .then(response => response.json())
+            .then(data => {
+                let filteredJobs = data.jobs;
+    
+                if (salaryFilter !== 'Any') {
+                    filteredJobs = filteredJobs.filter(job => job.salary.includes(salaryFilter));
+                }
+    
+                if (locationFilter !== 'Any') {
+                    filteredJobs = filteredJobs.filter(job => job.location === locationFilter);
+                }
+    
+                displayJobListings(filteredJobs);
+            })
+            .catch(error => console.error('Error loading data:', error));
+    }
+}    
 function toggleTheme() {
     const body = document.body;
     body.classList.toggle('light-theme');
