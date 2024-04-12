@@ -21,7 +21,7 @@ function displayJobListings(jobs) {
 function createJobCard(job) {
     const jobCard = document.createElement('div');
     jobCard.classList.add('job-card');
-    jobCard.setAttribute('id', `job-${job.id}`); // Set unique ID for each job card
+    jobCard.setAttribute('id', `job-${job.id}`); 
     jobCard.innerHTML = `
         <h2>${job.title}</h2>
         <p><strong>Company:</strong> ${job.company}</p>
