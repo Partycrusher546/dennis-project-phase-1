@@ -15,6 +15,7 @@ Welcome to Connected! This web application allows users to browse job listings, 
 - Candidate Registration: Candidates can register for job vacancies by submitting their name, email, and resume.
 - Job Updates: Candidates can view job updates and apply for jobs directly from the portal.
 - Contact Log: Log information for each job application is maintained.
+- Employee Log: Log information for jobs applications available 
 
 ### Additional Features
 
@@ -22,6 +23,7 @@ Welcome to Connected! This web application allows users to browse job listings, 
 - Photo for Each Job: Each job listing includes an image for visual representation.
 - Efficient Filtering: Filtering functionality is optimized to ensure efficient search results.
 - Page Refresh: After successful job application submission, the page automatically refreshes for seamless registration for another job.
+- Hover colour change when a curser is hovering over a button
 
 ### Live Site 
 (https://partycrusher546.github.io/dennis-project-phase-1/)
