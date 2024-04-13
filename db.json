@@ -2,12 +2,12 @@
     "jobs": [
       {
         "id": 1,
-        "title": "Frontend Developer",
-        "company": "Tech Company Inc.",
-        "location": "New York, NY",
+        "title": "Executive Chef",
+        "company": "Serena Hotel LLC",
+        "location": "Nairobi , Kenya",
         "salary": "$80,000 - $100,000",
-        "description": "We are hiring a frontend developer with proficiency in HTML, CSS, and JavaScript.",
-        "url": "https://picsum.photos/id/3/367/267"
+        "description": "Executive Chefs typically work for restaurants, but they can also work for catering businesses or private households. They use their culinary expertise and leadership abilities to maintain a clean and orderly kitchen environment. Their job is to promote food safety by teaching their staff about proper storage and shelf-life. They may also travel to meet with potential food suppliers and check the quality of their produce.",
+        "url": "https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2hlZiUyMGNvb2tpbmd8ZW58MHx8MHx8fDA%3D"
       },
       {
         "id": 2,
