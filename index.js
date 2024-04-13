@@ -76,6 +76,7 @@ function applyForJob(jobId) {
 
         if (name && email && resume) {
             window.location.reload();
+            
         } else {
             alert('Please fill out all fields.');
         }
@@ -115,9 +116,44 @@ function toggleTheme() {
 }
 
 
+
+
+
 const themeToggleBtn = document.getElementById('theme-toggle');
 themeToggleBtn.addEventListener('click', toggleTheme);
 
 
 const filterBtn = document.getElementById('filter-btn');
 filterBtn.addEventListener('click', filterJobListings);
+
+// Add a function to handle the submission of the new job form
+function addJob() {
+    const jobTitle = document.getElementById('job-title').value;
+    const companyName = document.getElementById('company-name').value;
+    const jobLocation = document.getElementById('job-location').value;
+    const jobSalary = document.getElementById('job-salary').value;
+    const jobDescription = document.getElementById('job-description').value;
+    const jobImageUrl = document.getElementById('job-image-url').value;
+
+    // Create a new job object
+    const newJob = {
+        title: jobTitle,
+        company: companyName,
+        location: jobLocation,
+        salary: jobSalary,
+        description: jobDescription,
+        url: jobImageUrl
+    };
+
+    // Append the new job to the job postings section
+    const jobPostingsContainer = document.getElementById('job-postings');
+    const jobCard = createJobCard(newJob);
+    jobPostingsContainer.appendChild(jobCard);
+
+    // Clear the form fields
+    document.getElementById('job-form').reset();
+}
+
+// Add an event listener to the submit button of the job form
+const submitJobBtn = document.getElementById('submit-job-btn');
+submitJobBtn.addEventListener('click', addJob);
