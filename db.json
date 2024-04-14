@@ -11,21 +11,21 @@
       },
       {
         "id": 2,
-        "title": "Data Analyst",
+        "title": "IT Executive (Networking Specialist)",
         "company": "Microsoft Corporation",
         "location": "New York, NY",
-        "salary": "$80,000 - $100,000",
+        "salary": "$40,000 - $100,000",
         "description": "We are hiring a data analyst with proficiency in SQL and data visualization tools.",
         "url": "https://media.istockphoto.com/id/1350722246/photo/server-room-background.webp?b=1&s=170667a&w=0&k=20&c=B20NCbhq-UXwjYJFaOWWcarR2w63PhXipjJa9GGB4uE="
       },
       {
         "id": 3,
-        "title": "Backend Developer",
-        "company": "Amazon.com",
-        "location": "New York, NY",
-        "salary": "$80,000 - $100,000",
-        "description": "We are hiring a backend developer with proficiency in Node.js, Express.js, and MongoDB.",
-        "url": "https://media.istockphoto.com/id/1473164518/photo/woman-with-back-pain-working-at-standing-desk-home-office.webp?b=1&s=170667a&w=0&k=20&c=XZNssSyEmkDSBK5w3f4lLUXcpTS24cyN890c5ZIUTiI="
+        "title": "Senior React Developer",
+        "company": "Lumenalta (formerly Clevertech)",
+        "location": "Remote  Full-time  Mid-Senior level",
+        "salary": "$90,000 - $150,000",
+        "description": "Over 20 years of remote experience, all 500+ staff are 100% remote and we still grow vibrant relationships, provide exceptional opportunities for career growth while working with stellar clients on ambitious projects",
+        "url": "https://plus.unsplash.com/premium_photo-1661371243525-d02768a7feee?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8U2VuaW9yJTIwUmVhY3QlMjBEZXZlbG9wZXJ8ZW58MHx8MHx8fDA%3D"
       },
       {
         "id": 4,
@@ -38,12 +38,12 @@
       },
       {
         "id": 5,
-        "title": "Backend Developer",
-        "company": "Amazon.com",
-        "location": "New York, NY",
-        "salary": "$80,000 - $100,000",
-        "description": "We are hiring a backend developer with proficiency in Node.js, Express.js, and MongoDB.",
-        "url": "https://images.unsplash.com/photo-1555963153-11ff60182d08?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHNjcmVlbnxlbnwwfHwwfHx8MA%3D%3D"
+        "title": " Software engineer (Android)",
+        "company": "ENGIE Energy Access (Africa) ",
+        "location": "Uganda, Kenya, Nigeria or Germany",
+        "salary": "$50,000 - $150,000",
+        "description": "ENGIE Energy Access is the leading Pay-As-You-Go (PAYGo) and mini-grids solutions provider in Africa. The company develops innovative, off-grid solar solutions for homes, public services and businesses, enabling customers and distribution partners access to clean, affordable energy. The PAYGO solar home systems are financed through affordable instalments from $0.19 per day and the mini-grids foster economic development by enabling electrical productive use and triggering business opportunities for entrepreneurs in rural communities. With over 1,800 employees, operations in nine countries across Africa (Benin, Côte dIvoire, Kenya, Mozambique, Nigeria, Rwanda, Tanzania, Uganda and Zambia), over 1.9 million customers and more than 9 million lives impacted so far, ENGIE Energy Access aims to impact 20 million lives across Africa by 2025.",
+        "url": "https://images.unsplash.com/photo-1512149673953-1e251807ec7c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fFNvZnR3YXJlJTIwZW5naW5lZXIlMjAoQW5kcm9pZCl8ZW58MHx8MHx8fDA%3D"
       }
     ],
     "jobAlerts": [
