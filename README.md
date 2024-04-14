@@ -1,5 +1,9 @@
 ### AUTHOR
 (Dennis Kiguru)
+
+# Date
+(12/04/2024)
+
 # Connected
 
 Welcome to Connected! This web application allows users to browse job listings, apply for jobs, and receive job alerts.
