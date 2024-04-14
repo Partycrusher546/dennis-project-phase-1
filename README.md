@@ -25,6 +25,21 @@ Welcome to Connected! This web application allows users to browse job listings, 
 - Page Refresh: After successful job application submission, the page automatically refreshes for seamless registration for another job.
 - Hover colour change when a curser is hovering over a button
 
+
+## Installation
+
+### Prerequisites
+- Git
+
+### Cloning the Repository
+1. Fork this repository by clicking on the "Fork" button on the top right corner of this page.
+2. Clone your forked repository to your local machine using the following command:
+
+```bash
+git clone https://github.com/Partycrusher546/dennis-project-phase-1.git
+
+```
+
 ### Live Site 
 (https://partycrusher546.github.io/dennis-project-phase-1/)
 
