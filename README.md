@@ -43,6 +43,9 @@ Welcome to Connected! This web application allows users to browse job listings, 
 git clone https://github.com/Partycrusher546/dennis-project-phase-1.git
 
 ```
+## User Interface
+![Screenshot](/assets/Screenshot%20from%202024-04-14%2010-34-24.png)
+![Screenshot](/assets/Screenshot%20from%202024-04-14%2010-35-44.png)
 
 ### Live Site 
 (https://partycrusher546.github.io/dennis-project-phase-1/)
